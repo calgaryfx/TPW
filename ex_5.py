@@ -1,13 +1,19 @@
 # Ex.5: Bottle Deposits (p.4)
-
 # Ask for amount of containers per size category.
 small = int(input("Input the number of drink containers 1L or less: "))
 large = int(input("Input the number of drink containers larger than 1L: "))
 
 # Calculate refund per size category.
-refund_10 = small * 0.10
-refund_25 = large * 0.25
+refund_10 = (small * 0.10)
+refund_25 = (large * 0.25)
+
+# Calculate total refund.
 total_refund = refund_10 + refund_25
+
+# Format refund categories to strings to get two decimal places.
+refund_10 = "{:.2f}".format(refund_10)
+refund_25 = "{:.2f}".format(refund_25)
+total_refund = "{:.2f}".format(total_refund)
 
 # Print refund per size category.
 print(f"{small} containers 1L or less is a refund of: ${refund_10}")
